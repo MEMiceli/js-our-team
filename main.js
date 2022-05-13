@@ -12,3 +12,74 @@
 // console.log() è nostro amico.
 // Quando un pezzo di codice funziona, chiediamoci se possiamo scomporlo in funzioni più piccole.
 // Buon lavoro!
+
+
+// array di lavoratori
+const teamCards = [
+    {
+        worker: {
+            imageCard:"img/wayne-barnett-founder-ceo.jpg",
+            name:"Wayne Barnett",
+            position:"Founder & CEO",
+        },
+    },
+    {
+        worker: {
+            imageCard:"img/angela-caroll-chief-editor.jpg",
+            name:"Angela Caroll",
+            position:"Chiev Editor",
+        },
+    },
+    {
+        worker: {
+            imageCard:"img/walter-gordon-office-manager.jpg",
+            name:"Walter Gordon",
+            position:"Office manager",
+        },
+    },
+    {
+        worker: {
+            imageCard:"img/angela-lopez-social-media-manager.jpg",
+            name:"Angela Lopez",
+            position:"Social Media Manager",
+        },
+    },
+    {
+        worker: {
+            imageCard:"img/scott-estrada-developer.jpg",
+            name:"Scott Estrada",
+            position:"Developer",
+        },
+    },
+    {
+        worker: {
+            imageCard:"img/wayne-barnett-founder-ceo.jpg",
+            name:"Barbara Ramos",
+            position:"Graphic Designer",
+        },
+    },
+];
+
+const list = document.querySelector(".team-container")
+
+for(let i = 0; i < teamCards.length; i++){
+    console.log(teamCards[i])
+    const scheda = `
+        <div class="team-card">
+                <div class="card-image">
+                <img
+                    src="${teamCards[i].worker.imageCard}"
+                    alt="${teamCards[i].worker.name}"
+                />
+                </div>
+                <div class="card-text">
+                <h3>${teamCards[i].worker.name}</h3>
+                <p>${teamCards[i].worker.position}</p>
+                </div>
+            </div>
+            `;
+    list.innerHTML += scheda;        
+}
+
+
+
